@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rsd:Service xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rsd="http://com.tibco.xpd/rsd" xmi:id="_-eUfkJmuEeW1YulE0vPgBA" name="forDOCREst-Service">
+  <resources xmi:id="_-eUfkZmuEeW1YulE0vPgBA" name="Resource1">
+    <methods xmi:id="_-eUfkpmuEeW1YulE0vPgBA" name="Method1">
+      <request xmi:id="_-eUfk5muEeW1YulE0vPgBA"/>
+      <response xmi:id="_-eUflJmuEeW1YulE0vPgBA"/>
+    </methods>
+  </resources>
+</rsd:Service>

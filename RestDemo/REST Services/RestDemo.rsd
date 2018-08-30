@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<rsd:Service xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rsd="http://com.tibco.xpd/rsd" xmi:id="_YLj-AJTGEeWEtM9NzS3aig" name="RestDemo-Service" contextPath="">
+  <resources xmi:id="_YLklEJTGEeWEtM9NzS3aig" name="getFromBW" pathTemplate="resource/">
+    <methods xmi:id="_YLklEZTGEeWEtM9NzS3aig" name="getDetails">
+      <request xmi:id="_YLklEpTGEeWEtM9NzS3aig"/>
+      <response xmi:id="_YLklE5TGEeWEtM9NzS3aig">
+        <payloadReference xmi:id="_rU9wcJTJEeWEtM9NzS3aig" namespace="http://xpd.tibco.com/jsd/1.0" ref="_d8Qp8JTJEeWEtM9NzS3aig" location="NewJsonSchema.jsd" mediaType="application/json"/>
+      </response>
+    </methods>
+  </resources>
+</rsd:Service>

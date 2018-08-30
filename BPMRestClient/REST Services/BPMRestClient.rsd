@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<rsd:Service xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rsd="http://com.tibco.xpd/rsd" xmi:id="_xDXm8JQgEeauBZUnZd5g2Q" name="BPMRestClient-Service" contextPath="/bpm/rest">
+  <resources xmi:id="_xDXm8ZQgEeauBZUnZd5g2Q" name="bpmresource" pathTemplate="/process/start/publishAsRestDemo/Process Packages/publishAsRestDemo.xpdl/publishAsRestDemoProcess_StartProcessInstanceWithoutParameters/1.0.0.20161016210417932">
+    <methods xmi:id="_xDXm8pQgEeauBZUnZd5g2Q" name="bpmpost" httpMethod="POST">
+      <request xmi:id="_xDXm85QgEeauBZUnZd5g2Q"/>
+      <response xmi:id="_xDXm9JQgEeauBZUnZd5g2Q"/>
+    </methods>
+  </resources>
+</rsd:Service>

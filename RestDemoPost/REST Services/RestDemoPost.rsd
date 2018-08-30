@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<rsd:Service xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rsd="http://com.tibco.xpd/rsd" xmi:id="_hDfFUJTkEeWEtM9NzS3aig" name="RestDemoPost-Service">
+  <resources xmi:id="_hDfFUZTkEeWEtM9NzS3aig" name="postForBW" pathTemplate="postresource">
+    <methods xmi:id="_hDfFUpTkEeWEtM9NzS3aig" name="postDetails" httpMethod="POST">
+      <request xmi:id="_hDfFU5TkEeWEtM9NzS3aig">
+        <payloadReference xmi:id="_qvRb4JTpEeWEtM9NzS3aig" namespace="http://xpd.tibco.com/jsd/1.0" ref="_WxlFwJTmEeWEtM9NzS3aig" location="POSTJsonReqSchema.jsd" mediaType="application/json"/>
+      </request>
+      <response xmi:id="_hDfFVJTkEeWEtM9NzS3aig">
+        <payloadReference xmi:id="_lV3ZIJTnEeWEtM9NzS3aig" namespace="http://xpd.tibco.com/jsd/1.0" ref="_hwDwEpTnEeWEtM9NzS3aig" location="PostJsonResponseSchema.jsd" mediaType="application/json"/>
+      </response>
+    </methods>
+  </resources>
+</rsd:Service>

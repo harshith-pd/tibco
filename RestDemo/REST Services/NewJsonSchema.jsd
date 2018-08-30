@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_d8FDwJTJEeWEtM9NzS3aig">
+  <packagedElement xmi:type="uml:Class" xmi:id="_d8Qp8JTJEeWEtM9NzS3aig" name="Res">
+    <eAnnotations xmi:id="_d8RRAJTJEeWEtM9NzS3aig" source="root"/>
+    <ownedAttribute xmi:id="_hCgCIJTJEeWEtM9NzS3aig" name="FirstName">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://BOM_TYPES/BomPrimitiveTypes.library.uml#_AGoC4HcNEdytQ9AWEvOuug"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hRv_EJTJEeWEtM9NzS3aig" name="LastName">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://BOM_TYPES/BomPrimitiveTypes.library.uml#_AGoC4HcNEdytQ9AWEvOuug"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hUKZ4JTJEeWEtM9NzS3aig" name="Age">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://BOM_TYPES/BomPrimitiveTypes.library.uml#_BRY7wHvBEdy0U8_1u7Q20g"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hV7UcJTJEeWEtM9NzS3aig" name="Married">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://BOM_TYPES/BomPrimitiveTypes.library.uml#_pSJ7cHvAEdy0U8_1u7Q20g"/>
+    </ownedAttribute>
+  </packagedElement>
+  <profileApplication xmi:id="_d8FDwZTJEeWEtM9NzS3aig">
+    <eAnnotations xmi:id="_d8FDwpTJEeWEtM9NzS3aig" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://BOM_TYPES/PrimitiveTypeFacets.profile.uml#_8TmTUstlEdy7K9XeCH7Hrw"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://BOM_TYPES/PrimitiveTypeFacets.profile.uml#_3A574HcJEdytQ9AWEvOuug"/>
+  </profileApplication>
+</uml:Package>

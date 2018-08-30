@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xpdl2:Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:database="http://www.tibco.com/XPD/database1.0.0" xmlns:eaijava="http://www.tibco.com/XPD/EAIJava1.0.0" xmlns:email="http://www.tibco.com/XPD/email1.0.0" xmlns:iProcessExt="http://www.tibco.com/XPD/iProcessExt1.0.0" xmlns:orchestrator="http://www.tibco.com/XPD/orchestrator1.0.0" xmlns:order="http://www.tibco.com/XPD/order1.0.0" xmlns:simulation="http://www.tibco.com/xpd/Simulation1.0.1" xmlns:xpdExt="http://www.tibco.com/XPD/xpdExtension1.0.0" xmlns:xpdl2="http://www.wfmc.org/2008/XPDL2.1" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 http://www.wfmc.org/standards/bpmnxpdl_31.xsd" Id="_DX4ZEJdKEeW1QfF4AnjmjA" xpdExt:DisplayName="publishAsRestDemo" Name="publishAsRestDemo">
+  <xpdl2:PackageHeader xpdExt:Language="en_US">
+    <xpdl2:XPDLVersion>2.1</xpdl2:XPDLVersion>
+    <xpdl2:Vendor>TIBCO</xpdl2:Vendor>
+    <xpdl2:Created>2015-11-30</xpdl2:Created>
+    <xpdl2:Description></xpdl2:Description>
+    <xpdl2:Documentation></xpdl2:Documentation>
+    <xpdl2:CostUnit>USD</xpdl2:CostUnit>
+  </xpdl2:PackageHeader>
+  <xpdl2:RedefinableHeader PublicationStatus="UNDER_REVISION">
+    <xpdl2:Author>masar</xpdl2:Author>
+    <xpdl2:Version>1.0.0.qualifier</xpdl2:Version>
+  </xpdl2:RedefinableHeader>
+  <xpdl2:Participants>
+    <xpdl2:Participant Id="_J2KEEJdKEeW1QfF4AnjmjA" xpdExt:DisplayName="publishAsRestDemo-Process (API Activity EndPoint)" Name="publishAsRestDemoProcess">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Inbound>
+            <xpdExt:VirtualBinding Name="Virtualization"/>
+            <xpdExt:SoapHttpBinding Name="SoapOverHttp" BindingStyle="RpcLiteral" SoapVersion="1.1" EndpointUrlPath="/publishAsRestDemo/publishAsRestDemoProcess" HttpConnectorInstanceName="httpConnector"/>
+          </xpdExt:Inbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_dllmoJdLEeW1QfF4AnjmjA" xpdExt:DisplayName="publishAsRestDemoProcess_Consumer" Name="publishAsRestDemoProcess_Consumer">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Outbound>
+            <xpdExt:VirtualBinding Name="Virtualization"/>
+          </xpdExt:Outbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+  </xpdl2:Participants>
+  <xpdl2:Pools>
+    <xpdl2:Pool Id="_GL1ucJdKEeW1QfF4AnjmjA" xpdExt:DisplayName="Pool" Name="Pool" BoundaryVisible="true" Process="_DY1bUJdKEeW1QfF4AnjmjA">
+      <xpdl2:Lanes>
+        <xpdl2:Lane Id="_GL1ucZdKEeW1QfF4AnjmjA" xpdExt:DisplayName="Lane" Name="Lane">
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo Height="314.0"/>
+          </xpdl2:NodeGraphicsInfos>
+        </xpdl2:Lane>
+      </xpdl2:Lanes>
+      <xpdl2:NodeGraphicsInfos>
+        <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="223,179,0" IsVisible="true"/>
+      </xpdl2:NodeGraphicsInfos>
+    </xpdl2:Pool>
+  </xpdl2:Pools>
+  <xpdl2:WorkflowProcesses>
+    <xpdl2:WorkflowProcess Id="_DY1bUJdKEeW1QfF4AnjmjA" xpdExt:DisplayName="publishAsRestDemo-Process" xpdExt:ApiEndPointParticipant="_J2KEEJdKEeW1QfF4AnjmjA" Name="publishAsRestDemoProcess">
+      <xpdl2:ProcessHeader>
+        <xpdl2:Description></xpdl2:Description>
+      </xpdl2:ProcessHeader>
+      <xpdl2:DataFields>
+        <xpdl2:DataField Id="_UvCSIJdKEeW1QfF4AnjmjA" xpdExt:DisplayName="demoperformer" Name="demoperformer">
+          <xpdl2:DataType>
+            <xpdl2:BasicType Type="PERFORMER">
+              <xpdExt:ParticipantQuery ScriptGrammar="RQL">resource(name='tibco-admin')</xpdExt:ParticipantQuery>
+            </xpdl2:BasicType>
+          </xpdl2:DataType>
+        </xpdl2:DataField>
+        <xpdl2:DataField Id="_rnTDUJdKEeW1QfF4AnjmjA" xpdExt:DisplayName="Name" Name="Name">
+          <xpdl2:DataType>
+            <xpdl2:BasicType Type="STRING">
+              <xpdl2:Length>50</xpdl2:Length>
+            </xpdl2:BasicType>
+          </xpdl2:DataType>
+        </xpdl2:DataField>
+      </xpdl2:DataFields>
+      <xpdl2:Activities>
+        <xpdl2:Activity Id="_GL1ucpdKEeW1QfF4AnjmjA" Name="StartProcessInstanceWithoutParameters" xpdExt:publishAsRestService="true" xpdExt:Visibility="Private" xpdExt:DisplayName="StartProcessInstanceWithoutParameters">
+          <xpdl2:Event>
+            <xpdl2:StartEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Trigger="Message">
+              <xpdl2:TriggerResultMessage xpdExt:Generated="true" xpdExt:ReplyImmediate="false" CatchThrow="CATCH">
+                <xpdl2:Message Id="_Jxe_cJdKEeW1QfF4AnjmjA"/>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_J2KEEJdKEeW1QfF4AnjmjA" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="publishAsRestDemo.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="publishAsRestDemoProcess" OperationName="StartProcessInstanceWithoutParameters">
+                  <xpdExt:ExternalReference location="publishAsRestDemo.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:StartEvent>
+          </xpdl2:Event>
+          <xpdl2:Performers>
+            <xpdl2:Performer>_J2KEEJdKEeW1QfF4AnjmjA</xpdl2:Performer>
+          </xpdl2:Performers>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,219,74" Height="27.0" LaneId="_GL1ucZdKEeW1QfF4AnjmjA" Width="27.0">
+              <xpdl2:Coordinates XCoordinate="55.0" YCoordinate="155.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
+          <xpdExt:NamespacePrefixMap>
+            <xpdExt:NamespaceEntries>
+              <xpdExt:NamespaceEntry Prefix="ns" Namespace="http://www.tibco.com/bs3.0/_DX4ZEJdKEeW1QfF4AnjmjA"/>
+              <xpdExt:NamespaceEntry Prefix="wsdl" Namespace="http://schemas.xmlsoap.org/wsdl/"/>
+              <xpdExt:NamespaceEntry Prefix="xsd" Namespace="http://www.w3.org/2001/XMLSchema"/>
+              <xpdExt:NamespaceEntry Prefix="tibex" Namespace="http://www.tibco.com/bs3.2/extensions"/>
+            </xpdExt:NamespaceEntries>
+          </xpdExt:NamespacePrefixMap>
+        </xpdl2:Activity>
+        <xpdl2:Activity Id="_GL1uc5dKEeW1QfF4AnjmjA" Name="EndEvent" xpdExt:DisplayName="End Event">
+          <xpdl2:Event>
+            <xpdl2:EndEvent Result="None"/>
+          </xpdl2:Event>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,219,74" Height="30.0" LaneId="_GL1ucZdKEeW1QfF4AnjmjA" Width="30.0">
+              <xpdl2:Coordinates XCoordinate="592.0" YCoordinate="155.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+        </xpdl2:Activity>
+        <xpdl2:Activity Id="_S2_ycJdKEeW1QfF4AnjmjA" Name="EnterName" xpdExt:Visibility="Private" xpdExt:DisplayName="Enter Name">
+          <xpdl2:Implementation>
+            <xpdl2:Task>
+              <xpdl2:TaskUser Implementation="Unspecified">
+                <xpdl2:Performers>
+                  <xpdl2:Performer>-defined-in-Activity-Performer-</xpdl2:Performer>
+                </xpdl2:Performers>
+                <xpdl2:MessageIn Id="_S2_ycZdKEeW1QfF4AnjmjA"/>
+                <xpdl2:MessageOut Id="_S2_ycpdKEeW1QfF4AnjmjA"/>
+              </xpdl2:TaskUser>
+            </xpdl2:Task>
+          </xpdl2:Implementation>
+          <xpdl2:Performers>
+            <xpdl2:Performer>_UvCSIJdKEeW1QfF4AnjmjA</xpdl2:Performer>
+          </xpdl2:Performers>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,219,74" Height="64.0" LaneId="_GL1ucZdKEeW1QfF4AnjmjA" Width="96.0">
+              <xpdl2:Coordinates XCoordinate="284.0" YCoordinate="155.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Offer="OfferAll" xpdExt:Strategy="SYSTEM_DETERMINED" xpdExt:ReOfferOnClose="true" xpdExt:ReOfferOnCancel="true"/>
+            <xpdExt:WorkItemPriority InitialPriority="50"/>
+          </xpdExt:ActivityResourcePatterns>
+          <xpdExt:AssociatedParameters DisableImplicitAssociation="false">
+            <xpdExt:AssociatedParameter FormalParam="Name" Mode="INOUT" Mandatory="false">
+              <xpdl2:Description></xpdl2:Description>
+            </xpdExt:AssociatedParameter>
+          </xpdExt:AssociatedParameters>
+        </xpdl2:Activity>
+      </xpdl2:Activities>
+      <xpdl2:Transitions>
+        <xpdl2:Transition Id="_GL1udJdKEeW1QfF4AnjmjA" xpdExt:DisplayName="" Name="" From="_S2_ycJdKEeW1QfF4AnjmjA" To="_GL1uc5dKEeW1QfF4AnjmjA">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.StartAnchorPosition"/>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
+        <xpdl2:Transition Id="_S2_yc5dKEeW1QfF4AnjmjA" xpdExt:DisplayName="" Name="" From="_GL1ucpdKEeW1QfF4AnjmjA" To="_S2_ycJdKEeW1QfF4AnjmjA">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
+      </xpdl2:Transitions>
+      <xpdl2:ExtendedAttributes>
+        <xpdl2:ExtendedAttribute Name="Destination" Value="BPM"/>
+      </xpdl2:ExtendedAttributes>
+      <xpdl2:Extensions/>
+      <xpdExt:RESTServices>
+        <xpdExt:RESTService Id="_A28JgJm_EeW1YulE0vPgBA" xpdExt:DisplayName="publishAsRestDemoProcess_StartProcessInstanceWithoutParameters" xpdExt:restActivityId="_GL1ucpdKEeW1QfF4AnjmjA" xpdExt:XpdModelType="PageFlow" Name="publishAsRestDemoProcess_StartProcessInstanceWithoutParameters">
+          <xpdl2:Participants>
+            <xpdl2:Participant Id="_A28wkJm_EeW1YulE0vPgBA" Name="Partic_A28wkJm_EeW1YulE0vPgBA">
+              <xpdl2:ParticipantType Type="SYSTEM"/>
+              <xpdExt:ParticipantSharedResource>
+                <xpdExt:WebService>
+                  <xpdExt:Outbound>
+                    <xpdExt:VirtualBinding Name="Virtualization"/>
+                  </xpdExt:Outbound>
+                </xpdExt:WebService>
+              </xpdExt:ParticipantSharedResource>
+            </xpdl2:Participant>
+          </xpdl2:Participants>
+          <xpdl2:Activities>
+            <xpdl2:Activity Id="_A28JgZm_EeW1YulE0vPgBA" Name="Start">
+              <xpdl2:Event>
+                <xpdl2:StartEvent Trigger="None"/>
+              </xpdl2:Event>
+            </xpdl2:Activity>
+            <xpdl2:Activity Id="_A28wkZm_EeW1YulE0vPgBA" Name="CallStartProcessInstanceWithoutParameters">
+              <xpdl2:Implementation>
+                <xpdl2:Task>
+                  <xpdl2:TaskSend Implementation="WebService">
+                    <xpdl2:Message Id="_A28wkpm_EeW1YulE0vPgBA"/>
+                    <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_A28wkJm_EeW1YulE0vPgBA">
+                      <xpdl2:Service xpdExt:IsRemote="true">
+                        <xpdl2:EndPoint EndPointType="WSDL">
+                          <xpdl2:ExternalReference location="publishAsRestDemo.wsdl"/>
+                        </xpdl2:EndPoint>
+                      </xpdl2:Service>
+                    </xpdl2:WebServiceOperation>
+                    <xpdExt:PortTypeOperation PortTypeName="publishAsRestDemoProcess" OperationName="StartProcessInstanceWithoutParameters">
+                      <xpdExt:ExternalReference location="publishAsRestDemo.wsdl"/>
+                    </xpdExt:PortTypeOperation>
+                  </xpdl2:TaskSend>
+                </xpdl2:Task>
+              </xpdl2:Implementation>
+              <xpdl2:Performer>_A28wkJm_EeW1YulE0vPgBA</xpdl2:Performer>
+            </xpdl2:Activity>
+          </xpdl2:Activities>
+          <xpdl2:ExtendedAttributes>
+            <xpdl2:ExtendedAttribute Name="Destination" Value="BPM"/>
+          </xpdl2:ExtendedAttributes>
+        </xpdExt:RESTService>
+      </xpdExt:RESTServices>
+    </xpdl2:WorkflowProcess>
+  </xpdl2:WorkflowProcesses>
+  <xpdl2:ExtendedAttributes>
+    <xpdl2:ExtendedAttribute Name="CreatedBy" Value="TIBCO Business Studio"/>
+    <xpdl2:ExtendedAttribute Name="FormatVersion" Value="19"/>
+    <xpdl2:ExtendedAttribute Name="OriginalFormatVersion" Value="18"/>
+  </xpdl2:ExtendedAttributes>
+</xpdl2:Package>

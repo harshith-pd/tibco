@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<rsd:Service xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rsd="http://com.tibco.xpd/rsd" xmi:id="_BJHJMJQmEeauBZUnZd5g2Q" name="RESTExternalClient-Service" contextPath="">
+  <resources xmi:id="_BJHJMZQmEeauBZUnZd5g2Q" name="Resourceexternal" pathTemplate="/posts/{reqID}">
+    <parameters xmi:id="_ccYhkJQwEeauBZUnZd5g2Q" name="reqID" style="PATH" dataType="INTEGER" mandatory="true">
+      <defaultValue xsi:nil="true"/>
+    </parameters>
+    <methods xmi:id="_BJHJMpQmEeauBZUnZd5g2Q" name="getexternal">
+      <request xmi:id="_BJHJM5QmEeauBZUnZd5g2Q"/>
+      <response xmi:id="_BJHJNJQmEeauBZUnZd5g2Q">
+        <payloadReference xmi:id="_FYZ6gJQuEeauBZUnZd5g2Q" namespace="http://xpd.tibco.com/jsd/1.0" ref="_n-qyoJQoEeauBZUnZd5g2Q" location="response.jsd" mediaType="application/json"/>
+      </response>
+    </methods>
+  </resources>
+</rsd:Service>
